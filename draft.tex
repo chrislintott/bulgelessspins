@@ -1,0 +1,162 @@
+% mnras_template.tex
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[Bulgeless galaxies, black hole spin and outflows]{Black hole spin really does affect outflows, probably}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[Smethurst, Lintott and Simmons]{
+Rebecca J. Smethurst,$^{1,2}$\thanks{E-mail: rebecca.smethurst@chch.ox.ac.uk (RJS)}
+Chris J. Lintott,$^{2}$
+and Brooke D. Simmons$^{3}$
+\\
+% List of institutions
+$^{1}$ChristChurch, Oxford\\
+$^{2}$Department of Physics, University of Oxford, Keble Road, Oxford, OX1 3RH\\
+$^{3}$University of Lancaster, Up North.}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2018}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+The relationship of the spin of supermassive blackholes and their propensity to power outflows is a much debated one. The spin of a black hole can be assumed to be a product of its accretion history; accretion from a well-ordered disk will tend to spin up the black hole while growth through disruptive events such as major mergers will be less effective at increasing the angular momentum. We use a sample of `bulgeless' galaxies which are maximally disk dominated and thus which have not undergone a major merger to test the idea that black holes with greater spins are more likely to power outflows. We show that [Haven't done the work yet]. 
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+keyword1 -- keyword2 -- keyword3
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Firstly, a bit about the importance of outflows.
+
+Then we need to justify/discuss the purported connection between spin and outflows.
+
+Then we need to discuss bulgeless galaxies, and question whether we can say something about their black hole spin.
+
+\section{Methods}
+\subsection{Sample selection}
+Including control sample
+\subsection{How to spot an outflow}
+
+\section{Results}
+Including a vaguely plausible statistical test
+
+\section{Conclusion}
+This looks promising - proper work with NuStar needed
+
+\section*{Acknowledgements}
+Thanks to people. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+% The best way to enter references is to use BibTeX:
+
+%\bibliographystyle{mnras}
+%\bibliography{example} % if your bibtex file is called example.bib
+
+
+% Alternatively you could enter them by hand, like this:
+% This method is tedious and prone to error if you have lots of references
+\begin{thebibliography}{99}
+\bibitem[\protect\citeauthoryear{Author}{2012}]{Author2012}
+Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
+\bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
+Others S., 2012, Journal of Interesting Stuff, 17, 198
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\section{Some extra material}
+
+If you want to present additional material which would interrupt the flow of the main paper,
+it can be placed in an Appendix which appears after the list of references.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
